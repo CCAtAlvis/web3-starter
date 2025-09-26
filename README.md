@@ -6,6 +6,7 @@ Make sure you have `nodejs` and `npm` installed on your machine.
 2. Run `npm install` to install all the dependencies
 3. And in case the above command throws error, try `npm install --force` 🤷🏻‍♂️
 4. You can also run `npx hardhat compile` just for some little fun
+5. `npx hardhat run scripts/deploy.js --network localhost` to deploy the contract
 <br><br>
 
 Install metamask extension on your browser and create an account.
@@ -33,3 +34,4 @@ usdc faucet: https://faucet.circle.com/ <br>
 [Understanding Solana Blockchain](https://solana.com/docs/intro/overview)<br>
 [Developing on Solana](https://www.soldev.app/course/getting-started)<br>
 [Simplifying blockchain for User, i.e. Understanding Intents](https://anoma.net/blog/an-introduction-to-intents-and-intent-centric-architectures)
+[How to Create and Deploy a Smart Contract with Hardhat](https://www.quicknode.com/guides/ethereum-development/smart-contracts/how-to-create-and-deploy-a-smart-contract-with-hardhat)

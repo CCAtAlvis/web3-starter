@@ -60,12 +60,12 @@ contract MarketplaceV3 {
         require(p.quantity >= _order.quantity, "not enough quantity");
 
         if (msg.value == 0) {
-            require(usdc.balanceOf(msg.sender) >= value, "not enough user funds");
+            require(usdc.balanceOf(msg.sender) >= msg.value, "not enough user funds");
 
             uint256 allowance = usdc.allowance(msg.sender, address(this));
-            require(allowance >= value, "not enough allowance to transfer funds");
+            require(allowance >= msg.value, "not enough allowance to transfer funds");
 
-            usdc.transferFrom(msg.sender, p.owner, value);
+            usdc.transferFrom(msg.sender, p.owner, msg.value);
         } else {
             uint256 value = p.price*_order.quantity;
             require(value == msg.value, "incorrect value sent");

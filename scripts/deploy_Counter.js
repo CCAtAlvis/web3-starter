@@ -1,10 +1,6 @@
 async function main() {
-  const Contract = await ethers.getContractFactory("NamasteDuniya");
+  const Contract = await ethers.getContractFactory("CounterV2");
   const deployedContract = await Contract.deploy();
-
-  const signers = await ethers.getSigners();
-  const signer = signers[0];
-  console.log("signer:", signer.address);
 
   // console.log(deployedContract);
   console.log("Contract deployed to address:", deployedContract.address);
